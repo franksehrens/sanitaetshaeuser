@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sanitätshäuser Deutschland - Karte</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🏥 Sanitätshäuser Deutschland</h1>
+            <p>Finden Sie alle Sanitätshäuser in Deutschland auf der Karte</p>
+        </header>
+        
+        <div class="controls">
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="Stadt oder PLZ suchen...">
+                <button onclick="searchLocation()">Suchen</button>
+            </div>
+            <div class="filter-box">
+                <select id="ratingFilter">
+                    <option value="">Alle Bewertungen</option>
+                    <option value="4">4+ Sterne</option>
+                    <option value="3">3+ Sterne</option>
+                </select>
+                <button onclick="filterMarkers()">Filtern</button>
+            </div>
+        </div>
+
+        <div class="main-content">
+            <div id="map"></div>
+            <div class="sidebar">
+                <h3>Sanitätshäuser Liste</h3>
+                <div id="locationList" class="location-list">
+                    <div class="loading">Lade Sanitätshäuser...</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="info-panel">
+            <div class="stats">
+                <span id="totalCount">0</span> Sanitätshäuser gefunden
+            </div>
+            <div class="legend">
+                <div class="legend-item">
+                    <span class="legend-color" style="background-color: #4CAF50;"></span>
+                    <span>4+ Sterne</span>
+                </div>
+                <div class="legend-item">
+                    <span class="legend-color" style="background-color: #FF9800;"></span>
+                    <span>3+ Sterne</span>
+                </div>
+                <div class="legend-item">
+                    <span class="legend-color" style="background-color: #F44336;"></span>
+                    <span>Unter 3 Sterne</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 
