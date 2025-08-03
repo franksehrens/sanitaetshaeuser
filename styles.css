@@ -9,10 +9,10 @@ body {
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     min-height: 100vh;
     color: #333;
+    padding: 0 4%;
 }
 
 .container {
-    max-width: 1400px;
     margin: 0 auto;
     padding: 20px;
 }
@@ -80,7 +80,7 @@ header p {
     display: grid;
     grid-template-columns: 1fr 350px;
     gap: 20px;
-    height: 70vh;
+    height: 85vh;
     margin-bottom: 20px;
 }
 
@@ -218,7 +218,8 @@ header p {
 @media (max-width: 1024px) {
     .main-content {
         grid-template-columns: 1fr;
-        grid-template-rows: 1fr 300px;
+        grid-template-rows: 1fr 350px;
+        height: 90vh;
     }
     
     .sidebar {
